@@ -4,6 +4,11 @@ import { colors } from '../../styles/theme';
 
 export const Container = styled.div`
   background: ${colors.primary};
+  position: relative;
+`;
+
+export const Background = styled.div`
+  background: ${({ color }) => color ? color : colors.primary};
 `;
 
 export const HeaderWrapper = styled.div`
@@ -12,7 +17,10 @@ export const HeaderWrapper = styled.div`
   max-width: 1440px;
   min-height: 90px;
   padding: 0 60px;
-
+  position: sticky;
+  top: 0;
+  background: ${colors.primary};
+  
   & > * + * {
     margin-left: 30px;
   }
@@ -44,14 +52,30 @@ export const ContentWrapper = styled.div`
 
 export const Content = styled.div`
   margin: 0 auto;
+  width: 100%;
   max-width: 1440px;
   padding: 0 60px;
 `;
 
 export const AboutDropbox = styled.div`
-  background: red;
   width: 40%;
 `;
 export const DropboxAndOthers = styled.div`
-  background: ${colors.secondary};
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+`;
+
+export const TextContainer = styled.div`
+
+`;
+
+export const StorageAndShare = styled.div`
+  width: 50%;
+`;
+
+export const DropboxAdvantages = styled.div`
+  height: 500px;
+  overflow-y: scroll;
 `;
