@@ -16,7 +16,7 @@ export const H2 = styled.h2`
 
 export const H3 = styled.h3`
   font-size: 25px;
-  line-height: 32px;
+  line-height: 32px;  
   color: ${({ color }) => color ? color : colors.white};
 `;
 
@@ -39,4 +39,19 @@ export const Text = styled.p`
 
 export const Image = styled.img`
   flex-shrink: 0;
+`;
+
+export const Line = styled.hr`
+  color: ${colors.white};
+`;
+
+export const Button = styled.button`
+  color: ${({ color }) => color ? color  : colors.white};
+  background: ${({ background }) => background ? background : colors.primary};
+  margin: 0 auto;
+  padding: 8px 50px;
+  border: 0;
+  outline: none;
+  font-size: 16px;
+  line-height: 26px;
 `;

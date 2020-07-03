@@ -60,7 +60,7 @@ export const Content = styled.div`
 export const AboutDropbox = styled.div`
   width: 40%;
 `;
-export const DropboxAndOthers = styled.div`
+export const FlexRowContainer = styled.div`
   display: flex;
   position: relative;
   align-items: center;

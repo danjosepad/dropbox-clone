@@ -14,14 +14,15 @@ import {
   Background,
   Content,
   AboutDropbox,
-  DropboxAndOthers,
+  FlexRowContainer,
   TextContainer,
   StorageAndShare,
-  DropboxAdvantages
 } from './styles';
-import { Image, LinkText, H3, H2, H1, Text } from '../../styles/fonts';
+import { Image, LinkText, H3, H2, H1, Text, Line, Button } from '../../styles/fonts';
 import { colors } from '../../styles/theme';
 import HomeOrganized from '../../assets/home-producttour-organized.png';
+import HomeFocused from '../../assets/homeFocused.png';
+import HomeClientProposal from '../../assets/homeClientProposal.png';
 // Page components
 
 const SImage = styled(Image)`
@@ -75,7 +76,7 @@ export default function Main() {
 
         <Background color={colors.secondary}>
           <Content>
-            <DropboxAndOthers>
+            <FlexRowContainer>
                 <SImage
                   srcset="https://cfl.dropboxstatic.com/static/images/index/zeus/home-hero@2x-vfl9GE_2I.jpg 2x"
                   alt="Uma escrivaninha ou espaço de trabalho com pastas tradicionais para arquivamento e outros acessórios de escritório."
@@ -90,7 +91,7 @@ export default function Main() {
                   a manterem o foco e a permanecerem sincronizadas com suas equipes.
                   </Text>
                 </TextContainer>
-            </DropboxAndOthers>
+            </FlexRowContainer>
           </Content>
         </Background>
         
@@ -98,12 +99,49 @@ export default function Main() {
           <Content>
             <StorageAndShare>
               <H2>Armazenamento e compartilhamento de arquivos são só o começo</H2>
-              <Image src={HomeOrganized} />
-
-              <DropboxAdvantages>
-                Teste
-              </DropboxAdvantages>
             </StorageAndShare>
+
+
+                <FlexRowContainer>
+                  <TextContainer>
+                    <H3 color={colors.white}>Mantenha-se organizado</H3>
+                    <Text color={colors.white}>
+                      Reúna em um só lugar arquivos tradicionais, conteúdo em nuvem,
+                      documentos do Dropbox Paper e atalhos da Web — e trabalhe da
+                      forma que funciona para você.
+                    </Text>
+                  </TextContainer>
+                  <Image src={HomeOrganized} />
+                </FlexRowContainer>
+              
+                
+                <FlexRowContainer>
+                  <TextContainer>
+                    <H3 color={colors.white}>Mantenha o foco</H3>
+                    <Text color={colors.white}>
+                      As sugestões personalizadas exibem arquivos e pastas quando 
+                      você precisa, para você perder menos tempo com buscas.
+                    </Text>
+                  </TextContainer>
+                  <Image src={HomeFocused} />
+                </FlexRowContainer>
+                
+                 <FlexRowContainer>
+                  <TextContainer>
+                    <H3 color={colors.white}>Permaneça em sincronia</H3>
+                    <Text color={colors.white}>
+                      Coordene tudo com a equipe e mantenha seus projetos em 
+                      andamento com as ferramentas que você usa todos os dias, 
+                      tudo dentro do Dropbox.
+                    </Text>
+                  </TextContainer>
+                  <Image src={HomeClientProposal} />
+                 </FlexRowContainer>
+                
+                <Line />
+
+                <H2 color={colors.secondary}>Saiba mais sobre os benefícios do Dropbox</H2>
+                <Button color={colors.black} background={colors.white}>Ver recursos</Button>
           </Content>
         </Background>
       </ContentWrapper>
