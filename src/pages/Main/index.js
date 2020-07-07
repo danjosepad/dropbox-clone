@@ -15,6 +15,7 @@ import {
   Content,
   AboutDropbox,
   FlexRowContainer,
+  FlexColumnContainer,
   TextContainer,
   StorageAndShare,
 } from './styles';
@@ -143,6 +144,25 @@ export default function Main() {
                 <H2 color={colors.secondary}>Saiba mais sobre os benefícios do Dropbox</H2>
                 <Button color={colors.black} background={colors.white}>Ver recursos</Button>
           </Content>
+        </Background>
+
+        <Background color={colors.white}>
+        <Content>
+          <H2 color={colors.black}>Encontre o plano do Dropbox perfeito para você</H2>
+
+          <FlexRowContainer>
+            <FlexColumnContainer>
+              <H2 isBold color={colors.black}>Para freelancers e pessoas físicas</H2>
+              <Button color={colors.white} background={colors.primary}>Ver recursos</Button>
+            </FlexColumnContainer>
+            
+            <FlexColumnContainer>
+              <H2 isBold color={colors.black}>Para empresas e equipes de qualquer tamanho</H2>
+              <Button color={colors.white} background={colors.primary}>Ver recursos</Button>
+            </FlexColumnContainer>
+            
+          </FlexRowContainer>
+        </Content>
         </Background>
       </ContentWrapper>
     </Container>

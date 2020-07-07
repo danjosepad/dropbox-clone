@@ -6,18 +6,21 @@ export const H1 = styled.h1`
   line-height: 79px;
   letter-spacing: -1px;
   color: ${({ color }) => color ? color : colors.white};
+  font-weight: ${({ isBold }) => isBold ? 500 : 400};
 `;
 
 export const H2 = styled.h2`
   font-size: 40px;
   line-height: 46px;
   color: ${({ color }) => color ? color : colors.white};
+  font-weight: ${({ isBold }) => isBold ? 900 : 400};
 `;
 
 export const H3 = styled.h3`
   font-size: 25px;
   line-height: 32px;  
   color: ${({ color }) => color ? color : colors.white};
+  font-weight: ${({ isBold }) => isBold ? 500 : 400};
 `;
 
 export const LinkText = styled.a`
@@ -28,6 +31,7 @@ export const LinkText = styled.a`
   font-family: 'SharpGrotesk', sans-serif;
   font-weight: 300;
   color: ${({ color }) => color ? color : colors.white};
+  font-weight: ${({ isBold }) => isBold ? 500 : 400};
 `;
 
 export const Text = styled.p`
@@ -35,6 +39,7 @@ export const Text = styled.p`
   font-size: 16px;
   line-height: 26px;
   color: ${({ color }) => color ? color : colors.white};
+  font-weight: ${({ isBold }) => isBold ? 500 : 400};
 `;
 
 export const Image = styled.img`

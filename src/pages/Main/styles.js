@@ -65,6 +65,17 @@ export const FlexRowContainer = styled.div`
   position: relative;
   align-items: center;
   width: 100%;
+  ${({ isSpacing }) => isSpacing 
+    ? ` justify-content: space-between`
+    : ''
+  }
+`;
+
+export const FlexColumnContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
 `;
 
 export const TextContainer = styled.div`
